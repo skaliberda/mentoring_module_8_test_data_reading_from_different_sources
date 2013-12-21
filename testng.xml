@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
+<suite name="SystemSuite" verbose="2">
+    
+	<test name="System" preserve-order="true">
+		<packages>
+			<package name="com.epam.mentoring.tests" />
+		</packages>
+	</test>
+</suite>
