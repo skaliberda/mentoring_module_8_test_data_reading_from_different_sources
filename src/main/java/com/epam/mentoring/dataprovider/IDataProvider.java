@@ -14,10 +14,4 @@ public interface IDataProvider {
 //	one exact line of the data(e.g. ->login, password, verifName) 
 	public String[] loadData(int startRowIndex);
 	
-//	get one value specified by indexes
-	public String loadData(int startRowIndex, int startColumnIndex);
-	
-//	get one value specified by index and column name
-	public String loadData(int startRowIndex, String columnName);
-
 }

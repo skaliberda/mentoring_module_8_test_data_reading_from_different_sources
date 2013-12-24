@@ -25,14 +25,4 @@ public class StubDataProvider implements IDataProvider {
 		return data;
 	}
 
-	public String loadData(int startRowIndex, int startColumnIndex) {
-		String login = "fortrainingepam";
-		return login;
-	}
-
-	public String loadData(int startRowIndex, String columnName) {
-		String pass = "fortrainingepam";
-		return pass;
-	}
-
 }
