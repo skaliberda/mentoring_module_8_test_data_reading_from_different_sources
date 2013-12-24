@@ -18,7 +18,7 @@ public class StubDataProvider implements IDataProvider {
 	}
 
 	public String[] loadData(int startRowIndex) {
-		String[] data = new String[2];
+		String[] data = new String[3];
 		data[0]= "fortrainingepam";
 		data[1]= "qwe123asd123zxc";
 		data[2]= "+Sergey";
