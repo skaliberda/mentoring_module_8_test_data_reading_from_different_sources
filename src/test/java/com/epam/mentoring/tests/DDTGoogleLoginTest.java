@@ -10,29 +10,35 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import com.epam.mentoring.configuration.CredentialsConfiguration;
+import com.epam.mentoring.dataprovider.IDataProvider;
+import com.epam.mentoring.dataprovider.StubDataProvider;
+
 public class DDTGoogleLoginTest {
 
+	CredentialsConfiguration credentials;
 	WebDriver driver;
-//	variables that need to be read from file
-	String login = "fortrainingepam";
-	String pass = "qwe123asd123zxc";
-	String verifName = "+Sergiy";
-
+	IDataProvider data;
 	
 	@BeforeClass
 	public void setUp(){
 		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+//		here you should change initialization of dataprovider
+		data = new StubDataProvider();
+		credentials = new CredentialsConfiguration(data.loadData());
+//		use one of this initialization
+//		credentials = new CredentialsConfiguration(data.loadData(2));
 	}
 	
 	@Test
 	public void loginTest() throws InterruptedException{
 		driver.get("http://gmail.com");
-		driver.findElement(By.id("Email")).sendKeys(login);
-		driver.findElement(By.id("Passwd")).sendKeys(pass);
+		driver.findElement(By.id("Email")).sendKeys(credentials.getLogin());
+		driver.findElement(By.id("Passwd")).sendKeys(credentials.getPassword());
 		driver.findElement(By.id("signIn")).click();
 		System.out.println(driver.findElement(By.xpath("//a[@class='gb_f gb_j']")).getText());
-		Assert.assertEquals(driver.findElement(By.xpath("//a[@class='gb_f gb_j']")).getText(), verifName, "Name for logged in user is not found. Probably user is not logged in propertly");
+		Assert.assertEquals(driver.findElement(By.xpath("//a[@class='gb_f gb_j']")).getText(), credentials.getUserName(), "Name for logged in user is not found. Probably user is not logged in propertly");
 	}
 	
 	@AfterClass

@@ -1,4 +1,4 @@
-package com.epam.mentoring.core;
+package com.epam.mentoring.dataprovider;
 
 public interface IDataProvider {
 	
