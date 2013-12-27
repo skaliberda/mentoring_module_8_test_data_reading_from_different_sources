@@ -1,0 +1,8 @@
+{
+	"users": 
+	[
+		{ "index":"0", "login":"log", "password":"pass", "verifName":"name" },
+		{ "index":"1", "login":"log", "password":"pass", "verifName":"name" },
+		{ "index":"2", "login":"log", "password":"pass", "verifName":"name" }
+	]
+}
