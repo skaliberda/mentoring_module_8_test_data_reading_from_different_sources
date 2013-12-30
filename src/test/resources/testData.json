@@ -1,0 +1,14 @@
+{	
+"users":
+	[
+<<<<<<< HEAD
+		{ "index":0, "login":"fortrainingepam", "password":"qwe123asd123zxc", "verifName":"+Sergiy" },
+		{ "index":1, "login":"epammentoring", "password":"WSXqaz123", "verifName":"+Mentor" },
+		{ "index":2, "login":"mentoringdnipro", "password":"123wsxQAZ", "verifName":"+Antony" }
+=======
+		{ "index":"0", "login":"fortrainingepam", "password":"qwe123asd123zxc", "verifName":"+Sergiy" },
+		{ "index":"1", "login":"epammentoring", "password":"WSXqaz123", "verifName":"+Mentor" },
+		{ "index":"2", "login":"mentoringdnipro", "password":"123wsxQAZ", "verifName":"+Antony" }
+>>>>>>> 1b3e46d9f15f4d20a306eba1534a5b8a323177c4
+	]
+}
