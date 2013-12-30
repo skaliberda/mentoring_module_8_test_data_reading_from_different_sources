@@ -1,8 +1,0 @@
-{	
-"users":
-	[
-		{ "index":0, "login":"fortrainingepam", "password":"qwe123asd123zxc", "verifName":"+Sergiy" },
-		{ "index":1, "login":"epammentoring", "password":"WSXqaz123", "verifName":"+Mentor" },
-		{ "index":2, "login":"mentoringdnipro", "password":"123wsxQAZ", "verifName":"+Antony" }
-	]
-}
