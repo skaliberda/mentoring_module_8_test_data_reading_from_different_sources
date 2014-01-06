@@ -11,21 +11,20 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.epam.mentoring.configuration.CredentialsConfiguration;
-import com.epam.mentoring.dataprovider.IDataProvider;
-import com.epam.mentoring.dataprovider.StubDataProvider;
+import com.epam.mentoring.dataprovider.JsonDataProvider;
 
 public class DDTGoogleLoginTest {
 
 	CredentialsConfiguration credentials;
 	WebDriver driver;
-	IDataProvider data;
+	JsonDataProvider data;
 	
 	@BeforeClass
 	public void setUp(){
 		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 //		here you should change initialization of dataprovider
-		data = new StubDataProvider();
+		data = new JsonDataProvider();
 		credentials = new CredentialsConfiguration(data.loadData());
 //		use one of this initialization
 //		credentials = new CredentialsConfiguration(data.loadData(2));
