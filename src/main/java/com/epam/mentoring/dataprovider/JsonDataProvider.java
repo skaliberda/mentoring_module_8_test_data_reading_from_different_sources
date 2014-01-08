@@ -92,6 +92,6 @@ public class JsonDataProvider implements IDataProvider {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		return parseSingleUser(jsonString, 2);
+		return parseSingleUser(jsonString, startRowIndex);
 	}
 }
