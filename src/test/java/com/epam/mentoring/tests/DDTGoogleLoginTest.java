@@ -2,6 +2,7 @@ package com.epam.mentoring.tests;
 
 import java.util.concurrent.TimeUnit;
 
+import com.epam.mentoring.dataprovider.CsvDataProvider;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -17,14 +18,14 @@ public class DDTGoogleLoginTest {
 
 	CredentialsConfiguration credentials;
 	WebDriver driver;
-	JsonDataProvider data;
+	CsvDataProvider data;
 	
 	@BeforeClass
 	public void setUp(){
 		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 //		here you should change initialization of dataprovider
-		data = new JsonDataProvider();
+		data = new CsvDataProvider();
 		credentials = new CredentialsConfiguration(data.loadData());
 //		use one of this initialization
 //		credentials = new CredentialsConfiguration(data.loadData(2));
